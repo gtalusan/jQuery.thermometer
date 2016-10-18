@@ -694,5 +694,16 @@
          id="tspan4410"
          x="578.41888"
          y="233.08215">Top</tspan></text>
+    <text
+       style="display:inline"
+       xml:space="preserve"
+       data-style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:%%textColour%%;fill-opacity:1;stroke:none;font-family:Sans"
+       x="576.24628"
+       y="395.81595"
+       id="MiddleText"><tspan
+         sodipodi:role="line"
+         id="tspan4410-4"
+         x="576.24628"
+         y="395.81595">Middle</tspan></text>
   </g>
 </svg>

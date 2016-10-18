@@ -19,6 +19,7 @@
 					width: "100%",
 					bottomText: "Cold",
 					topText: "Hot",
+					middleText: "",
 					animationSpeed: 300,
 					maxValue: 8,
 					minValue: 0,
@@ -26,7 +27,7 @@
 						return blendColors("#ff7700","#ff0000", value / 8); 
 					},
 					valueChanged: function(value) {
-						$('#value').text(value.toFixed(2));
+						$('#fixture').thermometer( 'setMiddleText', value.toFixed(2) );
 					}
 				});
 
@@ -36,14 +37,9 @@
 				}, 2000 );
 			} );
 		</script>
-
-		<style type="text/css">
-			#value { width: 160px; text-align: center; }
-		</style>
 	</head>
 
 	<body>
-		<h2 id="value"></h2>
 		<div id="fixture"></div>
 	</body>
 </html>

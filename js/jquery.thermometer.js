@@ -41,6 +41,13 @@
 		},
 
 		/**
+		 * Set the text at the middle of the scale
+		 */
+		setMiddleText: function( newText ) {
+			this.middleText.find('tspan').text(newText);
+		},
+
+		/**
 		 * Set the text at the bottom of the scale
 		 */
 		setBottomText: function( newText ) {
@@ -90,6 +97,7 @@
 			var variables = { textColour: this.options.textColour };
 			this._formatDataAttribute( this.topText, "style", variables );
 			this._formatDataAttribute( this.bottomText, "style", variables );
+			this._formatDataAttribute( this.middleText, "style", variables );
 		},
 		
 		_updateTickColour: function( newColour ) {
@@ -123,6 +131,7 @@
 			this.neckLiquid = $('#'+id+'_NeckLiquid path');
 			this.bowlLiquid = $('#'+id+'_BowlLiquid path');
 			this.topText = $('#'+id+'_TopText');
+			this.middleText = $('#'+id+'_MiddleText');
 			this.bottomText = $('#'+id+'_BottomText');
 			this.bowlGlass = $('#'+id+'_BowlGlass');
 			this.neckGlass = $('#'+id+'_NeckGlass');
@@ -151,6 +160,7 @@
 				self.currentValue = self.options.startValue;
 				self.setValue( self.options.startValue );
 				self.setTopText( self.options.topText );
+				self.setMiddleText( self.options.middleText );
 				self.setBottomText( self.options.bottomText );
 				self.setLiquidColour( self.options.liquidColour );
 				self.setTextColour( self.options.textColour );
@@ -221,6 +231,7 @@
 			maxValue: 8,
 			startValue: 0,
 			topText: 8,
+			middleText: 4,
 			bottomText: 0,
 			textColour: '#000000',
 			tickColour: '#000000',
